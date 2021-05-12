@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <CheckBoxPreference
+        android:id="@+id/hourPref"
+        android:defaultValue="false"
+        android:key="hourFormat"
+        android:title="24 hour format?"
+        android:summaryOn="Yes"
+        android:summaryOff="No"/>
+    <CheckBoxPreference
+        android:id="@+id/smoothPref"
+        android:defaultValue="false"
+        android:key="smoothPref"
+        android:title="Smooth Second Hand?"
+        android:summaryOn="Yes"
+        android:summaryOff="No"/>
+    <ListPreference
+        android:id="@+id/listPref"
+        android:defaultValue="Blank"
+        android:entries="@array/Faces"
+        android:entryValues="@array/Faces"
+        android:key="CLOCK_FACE"
+        android:title="Clock Face Numerals"
+        android:summary="%s"/>
+    <EditTextPreference
+        android:id="@+id/intervalPref"
+        android:defaultValue="100"
+        android:inputType="number"
+        android:key="TIMER_INTERVAL"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="Update Interval (msec, 100-5000)" />
+</PreferenceScreen>
